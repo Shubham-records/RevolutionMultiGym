@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import maplogo from '../assets/image-video/map-marker-4-svgrepo-com.svg';
+import calllogo from '../assets/image-video/call-192-svgrepo-com.svg';
+import maillogo from '../assets/image-video/mail-svgrepo-com.svg';
 
 export default function Footer() {
   return (
@@ -66,7 +69,7 @@ export default function Footer() {
                   }}
                 >
                   <img
-                    src="/map-marker-4-svgrepo-com.svg"
+                    src={maplogo}
                     style={{ height: "1rem", margin: "0.6rem" }}
                   />
                 </span>
@@ -86,7 +89,7 @@ export default function Footer() {
                   }}
                 >
                   <img
-                    src="/call-192-svgrepo-com.svg"
+                    src={calllogo}
                     style={{ height: "1rem", margin: "0.6rem" }}
                   />
                 </span>
@@ -105,7 +108,7 @@ export default function Footer() {
                   }}
                 >
                   <img
-                    src="/mail-svgrepo-com.svg"
+                    src={maillogo}
                     style={{ height: "1rem", margin: "0.6rem" }}
                   />
                 </span>
