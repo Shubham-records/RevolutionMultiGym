@@ -2,7 +2,7 @@ export default function Page10(){
 
     return (
         <>
-          <section className="page10" style={{backgroundColor:"#2a242e", display:"flex", flexDirection:"column", alignItems:"center"}}>
+          <section className="page10" style={{ display:"flex", flexDirection:"column", alignItems:"center"}}>
             <h1 style={{color:"#fff", fontSize:"50px", margin:"1rem"}}>
               Videos
             </h1>

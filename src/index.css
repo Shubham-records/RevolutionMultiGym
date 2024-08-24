@@ -1,5 +1,5 @@
 *{
-  font-family: "Montserrat", sans-serif;
+  font-family: "Arimo", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -25,33 +25,35 @@ body {
     sans-serif;
 }
 
-                                                       /* page1 */
 
-
-header{
-  background-color:black;
-  display:flex;
-  width:100%;
-  align-items: center;
-  justify-content: space-between;
+header {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  width: 100%;
   position: sticky;
   top: 0;
   z-index: 9999;
 }
 
-
-.img {
-  aspect-ratio: 2.09;
-  object-fit: contain;
-  object-position: center;
-  width: 182px;
-  max-width: 100%;
-}
-.menu {
-  align-self: start;
+header nav {
   display: flex;
-  flex-wrap: wrap;
-  color: white;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+header img {
+  aspect-ratio: 2.09;
+
+  width: 9rem;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .menu li {
@@ -59,7 +61,7 @@ header{
   list-style: none;
 }
 
-.menu li a{
+.menu li a {
   font-size: 15px;
   text-transform: uppercase;
   padding: 5px 20px;
@@ -79,13 +81,22 @@ header{
   height: 3px;
   background-color: white;
   transition: width 0.3s ease-in-out; 
-
 }
 
 .menu li a:hover::after {
   width: 100%;
 }
 
+.left-menu {
+  justify-content: flex-start;
+}
+
+.right-menu {
+  justify-content: flex-end;
+}
+
+
+                                                       /* page1 */
 
 
 .page1 {
@@ -107,13 +118,13 @@ header{
 }
 .page1 span h2{
   font-weight: bold;
-  font-size: 50px;
 }
 .page1 span p{
-  width:600px;
+  width:700px;
   font-weight: Regular;
-  font-size: 20px;
-  margin-block-end: 7%;
+  font-size: 21.5px;
+  margin-block-end: 3%;
+  width: 60%;
 }
 
 .page1 span button {
@@ -159,21 +170,15 @@ header{
                                                               /* page2 */
 
 .page3{
-  height: 31rem;
-  color: white;
+  height: 20rem;
+  color: #000;
   display: grid;
-  padding: 5% 0%;
+  padding: 2% 0%;
   justify-items: center;
   overflow: hidden;
+  background-color: #ededed;
 }
 
-.page3 img{
-  
-  height: 70%;
-  width: 100%;
-  position: absolute;
-  opacity: 0.6;
-}
 .page3 span{
   justify-items: center;
   position: absolute;
@@ -183,10 +188,13 @@ header{
   text-align: center;
   font-weight: bold;
   font-size: 3rem;
+  text-transform: uppercase;
+  font-family: "Archivo Black",sans-serif;
+  margin: 1rem;
 }
 .page3 p{
-  text-align: justify;
-  font-size: 1.5rem;
+  text-align: center;
+  font-size: 1.2rem;
   padding: 0% 10%;
   line-height: 1.5;
 }
@@ -202,46 +210,57 @@ header{
 
 
 .page4 {
-  background-color: rgba(42, 36, 46, 1);
   display: flex;
-  width: 100%;
-  justify-content: center;
+  justify-content: space-evenly;
+  color: #000;
+  padding: 1.2rem;
+  background-color: #ededed;
+}
+
+.page4 p{
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.info-box {
+  text-align: center;
+}
+
+.info-box h3{
+  font-weight: bold;
+  font-family: "Archivo Black",sans-serif;
+  margin: 0;
+  padding: 0.5rem;
 
 }
 
-.page4div{
-  width: 75%;
-  margin: auto;
-}
-
-
-.carousel-img img{
-  height:400px ;
-  width: 550px;
-  border-radius: 2%;
-}
-
-.page4div{
-  margin: 5% 0%;
-}
-
-.slick-slide > div {
-  margin: 0 10px;
+.info-box img {
+  margin-bottom: 10px;
+  filter: brightness(0%);
 }
 
                                                                 /* page7 */
 
 
 .page7 h2{
-  font-size: 44px;
+  font-size: 3rem;
   text-align: center;
   color: #fff;
+  font-family: "Archivo Black",sans-serif;
+  margin: 0;
+  padding: 2rem 0;
 }
 
 .page7IMG{
   display: flex;
   justify-content: space-around;
-  margin: 5rem 0;
+  margin: 2rem 0;
 }
 
 .page7IMG img{
@@ -249,39 +268,75 @@ header{
   width: 18rem;
   margin: 0;
   padding: 0;
+  filter: grayscale(100%);
+}
+
+.container {
+  display: flex;
+}
+
+
+.overlay {
+  z-index: 99;
+  top: 0;
+  right: 0;
+  width: 60px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  writing-mode: vertical-rl;
+}
+
+.overlay h4 {
+
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.overlay p {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
                                                           /* page8 */
 
 
 
-.page8{
-  background-color: rgba(42, 36, 46, 1);
-}
+
 
 .page8 img{
-  height: 25rem;
-    width: 17rem;
+  height: 22rem;
+  width: 40rem;
   margin: 0;
   padding: 0;
-  border: 5px solid #fff;
-  border-radius: 10%;
+  border-radius: 1%;
 }
 
 .page8 h2{
   color: #fff;
   text-align: center;
   text-transform: capitalize;
+  font-family: "Archivo Black",sans-serif;
+
 }
-.page8 p{
+.page8 .serviceCardtitle{
   color: #fff;
-  text-align: center;
-  text-transform: capitalize;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 30%;
+  font-size:1.1rem;
 }
 
-.Servicesimg div{
-  margin: 1rem;
+.Servicesimg .serviceCarddis{
+  color: #bdbdbd;
+  font-size:0.9rem;
 }
+
 
 
                                                 /* page9 */
@@ -295,17 +350,17 @@ header{
 }
 
 .unconditionedCard{
-  background-color: #fff;
+  background-color: #f2f2f2;
   border-radius: 4px;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1);
     height: 244px;
     margin: 0 auto;
     max-width: 65ch;
-    transition: all;  
+    transition: all;
 }
 
 .conditionedCard{
-  background-color: #fff;
+  background-color: #f2f2f2;
   border-radius: 4px;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1);
     height: 100%;
@@ -314,6 +369,9 @@ header{
     transition: all;  
 }
 
+.slick-slide > div {
+  margin: 0 10px;
+}
 
 .User-Rating-Date{
     align-items: center;
@@ -345,7 +403,7 @@ header{
 
 
 .google-rating {
-  background-color: #fff; 
+  background-color: #f2f2f2; 
   border-radius: 6px; 
   padding: 16px;
   display: flex;
@@ -354,6 +412,10 @@ header{
   width: 68%;
   margin: 5rem auto 2rem;
   justify-content: space-between;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: black;
 }
 
 .rating-container {
@@ -499,4 +561,10 @@ a{
 
 button:hover {
   background-color: #218838;
+}
+
+
+
+.followus img {
+  height: 1.6rem;
 }

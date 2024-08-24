@@ -88,7 +88,7 @@ export default function Page9(){
   
 
     return (
-        <section className="page9">
+        <section className="page9" style={{backgroundColor:"#fff", padding: "1rem 0"}}>
             <div>
                 <div className="google-rating">
                   <span style={{display: "flex", gap: "1rem", alignItems: "center"}}>
@@ -115,10 +115,10 @@ export default function Page9(){
               </div>
               
             </div>
-						<div className="carusalcard" style={{padding: "0rem 15rem"}}>
+						<div className="carusalcard" style={{padding: "0rem 12rem"}}>
               <Slider {...settings}>
               {ListCarusal.map((googlereviews)=>(
-                <div className= {readMoreStates[googlereviews.name] ? "conditionedCard" :  "unconditionedCard"} key={googlereviews.name}>
+                <div className= {readMoreStates[googlereviews.name] ? "conditionedCard" :  "unconditionedCard"} style={{width:"90%"}} key={googlereviews.name}>
                   <span style={{alignItems: "center", display: "flex", justifyContent:"space-between", margin: "1rem auto 0",width: "90%"}}>
                     <div className="User-Rating-Date">
                       <img className="reviewer__img" src={googlereviews.img}/>

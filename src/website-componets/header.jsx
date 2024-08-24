@@ -1,22 +1,21 @@
-import Gymlogo from "../assets/image-video/logo.png"
-
+import Gymlogo from "../assets/image-video/logo.png";
 import { Link } from "react-router-dom";
 
-export default function Header(){
-
-
+export default function Header() {
     return (
         <>
             <header>
-                <img style={{padding: "0px 35px"}} loading="lazy" src={Gymlogo} className="img"/>
-                <nav style={{padding: "0px 20px"}}>
-                    <ul style={{float:"right"}} className="menu">
-                        <li><Link alt="" to="/">Home</Link></li>
-                        <li><Link alt="" to="/facilites">Facilites</Link></li>
-                        <li><Link alt="" to="/gallery">Gallery</Link></li>
-                        <li><Link alt="" to="/blog">Blog</Link></li>
-                        <li><Link alt="" to="/contactus">Get In touch</Link></li>
-                        <li><Link alt="" to="/downloadapp">Download App</Link></li>
+                <nav className="menu">
+                    <ul className="left-menu">
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/facilites">Facilities</Link></li>
+                        <li><Link to="/memberarea">Member Area</Link></li>
+                    </ul>
+                    <img loading="lazy" src={Gymlogo} className="img" alt="Gym Logo"/>
+                    <ul className="right-menu">
+                        <li><Link to="/contactus">Contact Us</Link></li>
+                        <li><Link to="/blog">Blog</Link></li>
+                        <li><Link to="/downloadapp">Download App</Link></li>
                     </ul>
                 </nav>
             </header>

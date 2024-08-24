@@ -13,6 +13,7 @@ import Footer from "./website-componets/footer";
 import ComingSoon from "./website-componets/comingsoon";
 import ContactUs from "./website-componets/contactUs";
 import Facilites from "./website-componets/facilites";
+import FollowUS from './website-componets/followUS'
 
 function App() {
   return (
@@ -23,17 +24,18 @@ function App() {
           <>
             <Page1 />
             <Page3 />
-            <Page4 />
             <Page7 />
+            <Page4 />
             <Page8 />
             <Page9 />
             <Page10 />
+            <FollowUS/>
             <Page11 />
           </>
         } />
-        <Route path="/gallery" element={
+        <Route path="/memberarea" element={
           <>
-            <Page4 />
+            <ComingSoon />
           </>
         } />
         <Route path="/contactus" element={
@@ -45,7 +47,6 @@ function App() {
         <Route path="/downloadapp" element={<ComingSoon />} />
         <Route path="/facilites" element={<Facilites />} />
       </Routes>
-      <Footer />
     </HashRouter>
   );
 }
