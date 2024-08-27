@@ -3,7 +3,7 @@ export default function Facilites(){
     const Facilitescard1 = [
         {
           title:"Certified Trainers",
-          p: "Our ATF facilities boast certified trainers dedicated to maximising your fitness potential, ensuring safe and effective workouts tailored to your needs.",
+          p: "Our RMG facilities boast certified trainers dedicated to maximising your fitness potential, ensuring safe and effective workouts tailored to your needs.",
         },
         {
           title:"Personal Training",
@@ -13,11 +13,11 @@ export default function Facilites(){
       const Facilitescard2 = [
         {
           title:"Modern Updated Equipments",
-          p: "Equipped with state-of-the-art machinery and cutting-edge technology, our facilities provide you with the latest in fitness equipment for an optimised workout experience.",
+          p: "Enhanced with premium machinery and cutting-edge, advanced technology, our facilities provide you with the latest in fitness equipment for an optimised workout experience.",
         },
         {
           title:"Most Hygienic Gym",
-          p: "Equipped with state-of-the-art machinery and cutting-edge technology, our facilities provide you with the latest in fitness equipment for an optimised workout experience.",
+          p: "Maintaining the highest standards of cleanliness and hygiene, providing you with a safe and healthy environment to pursue your fitness goals."
         },
       ]
 
