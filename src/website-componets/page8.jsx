@@ -31,13 +31,13 @@ export default function Page8(){
   ]
     return (
         <>
-          <div className="page8" style={{display: "flex", flexDirection: "column", justifyItems: "center",padding: "6rem 0 0 0"}}>
-            <h2 style={{fontSize:"3rem"}}>Our CLASSES</h2>
-            <div className="Servicesimg" style={{display:"flex", justifyContent: "space-evenly",}}>
+          <div className="page8">
+            <h2>Our CLASSES</h2>
+            <div className="Servicesimg">
               <div>
                 {serviceCarddata1.map((serviceCard)=>(
                   <>
-                  <span style={{width:"40rem", display:"block", padding: "1.5rem 0"}} key={serviceCard.title}>
+                  <span key={serviceCard.title}>
                     <img src={serviceCard.img} alt=""/>
                     <p className='serviceCardtitle'>{serviceCard.title}</p>
                     <p className='serviceCarddis'>{serviceCard.dis}</p>
@@ -50,7 +50,7 @@ export default function Page8(){
               <div>
               {serviceCarddata2.map((serviceCard)=>(
                   <>
-                  <span style={{width:"40rem", display:"block", padding: "1.5rem 0"}} key={serviceCard.title}>
+                  <span key={serviceCard.title}>
                     <img src={serviceCard.img} alt=""/>
                     <p className='serviceCardtitle'>{serviceCard.title}</p>
                     <p className='serviceCarddis'>{serviceCard.dis}</p>

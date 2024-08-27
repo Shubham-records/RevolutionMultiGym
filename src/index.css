@@ -7,6 +7,8 @@
 }
 
 
+
+
 body {
   margin: 0;
   padding: 0;
@@ -20,7 +22,7 @@ body {
   height: 100%;
   overflow: hidden;
   color: rgba(255, 255, 255, 1);
-
+  align-items: center;
   font: 700 20px Inknut Antiqua, -apple-system, Roboto, Helvetica,
     sans-serif;
 }
@@ -45,12 +47,19 @@ header nav {
 
 header img {
   aspect-ratio: 2.09;
-
-  width: 9rem;
+  width: clamp(6rem, 9vw, 20rem);
 }
 
-.menu ul {
+.menu .left-menu {
   display: flex;
+  flex: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu .right-menu {
+  display: flex;
+  flex: 1;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -62,11 +71,11 @@ header img {
 }
 
 .menu li a {
-  font-size: 15px;
+  font-size: 1rem;
   text-transform: uppercase;
   padding: 5px 20px;
   text-decoration: none;
-  color: white;
+  color: #d0d0d0;
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -86,15 +95,51 @@ header img {
 .menu li a:hover::after {
   width: 100%;
 }
-
-.left-menu {
-  justify-content: flex-start;
+.menu li a:hover {
+  color:#fff;
 }
 
-.right-menu {
+.left-menu {
   justify-content: flex-end;
 }
 
+.right-menu {
+  justify-content: flex-start;
+}
+
+.mobile-menu{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.mobile-menu li{
+  width: 100%;
+  padding: 10px;
+}
+
+.mobile-menu li a{
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 5px 20px;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+#hideonDESKTOP{
+  display: none;
+}
 
                                                        /* page1 */
 
@@ -116,13 +161,19 @@ header img {
   text-align: center;
   padding: 7% 0%
 }
-.page1 span h2{
+.page1 > span > h2{
   font-weight: bold;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size:5vw;
+    text-transform:uppercase;
+    margin:0;
 }
 .page1 span p{
   width:700px;
   font-weight: Regular;
-  font-size: 21.5px;
+  font-size: 1.4vw;
   margin-block-end: 3%;
   width: 60%;
 }
@@ -138,13 +189,12 @@ header img {
   box-sizing: border-box;
   cursor: pointer;
   display: inline-flex;
-  height: 48px;
+  height: 3vw;
   justify-content: center;
   line-height: 1;
   list-style: none;
   overflow: hidden;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding: 0 1vw;
   position: relative;
   text-align: left;
   text-decoration: none;
@@ -154,7 +204,7 @@ header img {
   touch-action: manipulation;
   white-space: nowrap;
   will-change: box-shadow, transform;
-  font-size: 15px;
+  font-size: 1vw;
 }
 
 .page1 span button a{
@@ -170,40 +220,32 @@ header img {
                                                               /* page2 */
 
 .page3{
-  height: 20rem;
   color: #000;
   display: grid;
   padding: 2% 0%;
   justify-items: center;
   overflow: hidden;
   background-color: #ededed;
+  align-content: start;
 }
 
 .page3 span{
   justify-items: center;
-  position: absolute;
 }
 
 .page3 h2{
   text-align: center;
   font-weight: bold;
-  font-size: 3rem;
+  font-size: clamp(2rem ,3.5vw, 3.5vw);
   text-transform: uppercase;
   font-family: "Archivo Black",sans-serif;
   margin: 1rem;
 }
 .page3 p{
   text-align: center;
-  font-size: 1.2rem;
+  font-size: clamp( 0.7rem ,1.2vw , 1.2rem);
   padding: 0% 10%;
   line-height: 1.5;
-}
-
-
-.aboutUs {
-  font-size: 44px;
-  text-align: center;
-  align-self: start;
 }
 
                                                       /* page4 */
@@ -222,14 +264,9 @@ header img {
   padding: 1rem 0;
 }
 
-.contact-info {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
 .info-box {
   text-align: center;
+  padding: 1rem 0;
 }
 
 .info-box h3{
@@ -249,7 +286,7 @@ header img {
 
 
 .page7 h2{
-  font-size: 3rem;
+  font-size: clamp(2rem ,3.5vw, 3.5vw);
   text-align: center;
   color: #fff;
   font-family: "Archivo Black",sans-serif;
@@ -263,13 +300,15 @@ header img {
   margin: 2rem 0;
 }
 
+
 .page7IMG img{
-  height: 25rem;
-  width: 18rem;
+  height: 25vw;
+  width: 18vw;
   margin: 0;
   padding: 0;
   filter: grayscale(100%);
 }
+
 
 .container {
   display: flex;
@@ -280,7 +319,7 @@ header img {
   z-index: 99;
   top: 0;
   right: 0;
-  width: 60px;
+  padding: 0 0 0 0.5rem;
   background-color: #000;
   display: flex;
   flex-direction: column;
@@ -292,26 +331,35 @@ header img {
 .overlay h4 {
 
   margin: 0;
-  font-size: 14px;
+  font-size: clamp(8px ,14px, 20px);
   letter-spacing: 2px;
 }
 
 .overlay p {
   margin: 0;
   text-transform: uppercase;
-  font-size: 1.3rem;
+  font-size: clamp( 1.3rem ,1.3vw , 1.3rem);
   font-weight: bold;
 }
 
                                                           /* page8 */
 
-
+.page8 {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  padding: 6rem 0 0 0;
+}
+.Servicesimg {
+  display:flex;
+  justify-content: space-evenly;
+}
 
 
 
 .page8 img{
-  height: 22rem;
-  width: 40rem;
+  height: 22vw;
+  width: 40vw;
   margin: 0;
   padding: 0;
   border-radius: 1%;
@@ -319,22 +367,29 @@ header img {
 
 .page8 h2{
   color: #fff;
+  font-size:clamp(2rem ,3vw, 3vw);
   text-align: center;
   text-transform: capitalize;
   font-family: "Archivo Black",sans-serif;
 
 }
+
 .page8 .serviceCardtitle{
   color: #fff;
   text-transform: uppercase;
   font-weight: bold;
-  width: 30%;
-  font-size:1.1rem;
+  font-size:clamp( 1rem ,1.1vw , 1.1rem);
 }
 
 .Servicesimg .serviceCarddis{
   color: #bdbdbd;
   font-size:0.9rem;
+}
+
+.Servicesimg span{
+  width:40vw;
+  display:block;
+  padding: 1.5rem 0;
 }
 
 
@@ -371,6 +426,8 @@ header img {
 
 .slick-slide > div {
   margin: 0 10px;
+  display: flex;
+
 }
 
 .User-Rating-Date{
@@ -481,6 +538,25 @@ a{
   text-decoration: none;
 }
 
+                                              /* page10 */
+
+.page10 div{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5rem;
+  }
+.page10 h1 {
+  color:#fff;
+  font-size:clamp(2rem ,3.5vw, 3.5vw);
+  margin:1rem;
+}
+
+.page10 iframe{
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
                                               /* facilities */
 
 .Facilites {
@@ -567,4 +643,18 @@ button:hover {
 
 .followus img {
   height: 1.6rem;
+}
+
+
+
+
+
+
+
+
+.mobilegoogle-rating {
+  display: none;
+}
+.carusalcardmobile {
+  display: none;
 }

@@ -6,7 +6,7 @@ export default function FollowUS() {
   
     return (
       <div className="followus" style={{color:"#000", backgroundColor:"#fff", justifyContent:"center", alignItems:"center", gap:"1rem", padding:"1rem", display:"flex"}}>
-        <h4>
+        <h4 style={{textAlign:"center",}}>
             FOLLOW US ON @REVOLUTION MULTI GYM
         </h4>
         <span style={{display:"inline-flex", gap:"1rem", alignItems: "center"}}>
