@@ -126,6 +126,16 @@
   .google-rating {
     display: none;
   }
+
+  .Facilites {
+    background-color: #333;
+    padding: 4vw 16vw;
+  }
+  .Facilites > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   
 }
 

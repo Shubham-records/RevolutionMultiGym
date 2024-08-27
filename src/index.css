@@ -560,12 +560,14 @@ a{
                                               /* facilities */
 
 .Facilites {
+    background-color: #333;
+    padding: 4vw 16vw;
+    min-height: 100vh;
+  }
+.Facilites > div{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: #333;
-  padding: 4rem 16rem;
-  border-radius: 10px;
 }
 
 .Facilites-card {
@@ -575,14 +577,13 @@ a{
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   flex: 1;
-  min-width: 220px;
 }
 
 .Facilites-card-title {
   color: #333; /* green color */
   font-size: 18px;
   font-weight:bold;
-  margin-bottom: 10px;
+  margin: 0;
 }
 
 .Facilites-card-text {

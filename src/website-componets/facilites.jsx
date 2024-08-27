@@ -24,7 +24,7 @@ export default function Facilites(){
     return (
       <>
         <div className="Facilites">
-          <div style={{display:"flex"}}>
+          <div>
             {Facilitescard1.map((card) => (
               <>
                 <div className="Facilites-card" key={card.title}>
